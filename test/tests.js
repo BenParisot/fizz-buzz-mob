@@ -2,16 +2,21 @@ const test = QUnit.test;
 
 function fizzBuzz(integer) {
     let result = '';
+    const keyWordOne = 'fizz';
+    const keyWordTwo = 'buzz';
+    
+    if(integer % 15 === 0) {
+        result = keyWordOne + keyWordTwo;
+    }
 
-    if(integer % 3 === 0 && integer % 5 === 0) {
-        result = 'fizzbuzz';
-    }
     else if(integer % 3 === 0) {
-        result = 'fizz';
+        result = keyWordOne;
     }
+
     else if(integer % 5 === 0) {
-        result = 'buzz';
+        result = keyWordTwo;
     }
+    
     else {
         result = integer;
     }   
