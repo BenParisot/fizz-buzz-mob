@@ -1,23 +1,24 @@
 const test = QUnit.test;
 
 function fizzBuzz(integer) {
-    let x = '';
-    if(integer % 3 === 0 && integer % 5 === 0) {
-        x = 'fizzbuzz';
+    let result = '';
 
+    if(integer % 3 === 0 && integer % 5 === 0) {
+        result = 'fizzbuzz';
     }
     else if(integer % 3 === 0) {
-        x = 'fizz';
+        result = 'fizz';
     }
     else if(integer % 5 === 0) {
-        x = 'buzz';
+        result = 'buzz';
     }
     else {
-        x = integer;
+        result = integer;
     }   
 
-    return x;
+    return result;
 }
+
 
 test('return fizz if divisible by 3', function(assert) {
     const integer = 3;
